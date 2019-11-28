@@ -11,6 +11,31 @@ body
   padding:0;
 }
 
+
+/*------Navbar------*/
 .logo img{
   width: 100px;
+}
+
+.headerIcons img{
+  width: 30px;
+}
+
+nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+  background-color: #84D8F6!important;
+}
+
+.navbar-light .navbar-toggler {
+  border: none;
+}
+
+ul.navbar-nav.mr-auto{
+  align-items: center;
+}
+
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+  color: white;
+  margin: 6px 0px;
+  text-transform: uppercase;
 }
