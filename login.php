@@ -1,32 +1,66 @@
-<?php include("layouts/header.php");?>
+<?php
+include("php/db.php");
+?>
 
+<?php include("layouts/head.php"); ?>
 
-<div class="fond_blur">
-	<h1>Connectez vous</h1>
-	<h2>Pour participer aux meilleurs évènements de Nantes</h2>
+<body>
 
-	<form method="post" action="php/login.php">
+	<?php include_once('./components/debug.php'); ?>
 
-		<div class="row">
-			<div class="col-sm-12 col-md-6">
-				<div class="form-group">
-					<label for="email">Votre e-mail</label>
-					<input class="form-control" type="email" name="email" id="email">
-				</div>
+	<main id="loginPage">
+
+		<div class="card bg-light">
+
+			<div class="registerLogo">
+				<img src="img/frent.png">
 			</div>
-			<div class="col-sm-12 col-md-6">
-				<div class="form-group">
-					<label for="password">Votre mot de passe</label>
-					<input class="form-control" type="password" name="password" id="password">
-				</div>
-			</div>
+
+			<article class="card-body mx-auto" style="max-width: 400px;">
+				<h4 class="card-title mt-3 text-center">Se connecter</h4>
+
+				<!---Form---->
+				<form method="post" action="php/login.php">
+
+					<!-----Group---->
+					<div class="form-group input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"> <i class="fa fa-users"></i> </span>
+						</div>
+						<input name="user_groupID" class="form-control" placeholder="Indentifiant du groupe" type="text">
+					</div>
+					
+					<!-----Email---->
+					<div class="form-group input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+						</div>
+						<input name="user_email" class="form-control" placeholder="Email" type="email">
+					</div>
+
+					<!------Password------>
+					<div class="form-group input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+						</div>
+						<input class="form-control" placeholder="Mot de passe" type="password">
+					</div>
+
+					<!------BUTTON------->
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary btn-block"> Se connecter </button>
+					</div>
+
+				</form>
+			</article>
 		</div>
+	</main>
 
-		<div class="form-group">
-			<button type="submit" class="btn btn-light" action="php/login.php">Valider</button>
-		</div>
+	<?php include("layouts/footer.php"); ?>
 
-</div>
+	<!--Scripts-->
+	<?php include("layouts/scripts.php"); ?>
 
+</body>
 
-<?php include("layouts/footer.php");?>
+</html>

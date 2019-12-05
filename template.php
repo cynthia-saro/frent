@@ -10,8 +10,8 @@
 
     <?php include("layouts/header.php");?>
 
-    <main id="homePage">
-      <h1></h1>
+    <main>
+      <!-------------A MODIFIER----------------->
     </main>
 
     <?php include("layouts/footer.php");?>

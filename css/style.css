@@ -3,16 +3,22 @@
 	padding: 0px;
 }
 
-body
-{
+html {
+  height: 100%;
+}
+body {
   background:#fff;
   font-family:'Lato';
-  margin:0;
-  padding:0;
+  min-height: 100%;
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-
-/*------Navbar------*/
+main{
+  height: 100vh;
+}
+/*----------------Navbar----------------*/
 .logo img{
   width: 100px;
 }
@@ -39,3 +45,89 @@ ul.navbar-nav.mr-auto{
   margin: 6px 0px;
   text-transform: uppercase;
 }
+
+/*------------------------------INDEX------------------------------*/
+.card-body.mx-auto{
+  text-align: center;
+}
+/*------------------------------INDEX END------------------------------*/
+
+/*------------------------------REGISTER------------------------------*/
+.divider-text {
+    position: relative;
+    text-align: center;
+    /* margin-top: 15px;
+    margin-bottom: 15px; */
+}
+.divider-text span {
+    padding: 7px;
+    font-size: 12px;
+    position: relative;   
+    z-index: 2;
+}
+.divider-text:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    top: 55%;
+    left: 0;
+    z-index: 1;
+}
+
+.registerLogo{
+ text-align: center;
+ margin-top: 8%;
+}
+
+.bg-light {
+  background-color:#84D8F6!important;
+  min-height: 100%;
+}
+
+.card-title.mt-3.text-center{
+  color: white;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.form-group.input-group{
+  margin: 15px 0px 15px 0px;
+}
+
+.btn-primary {
+  color: #fff;
+  margin-top: 30px;
+  background-color:#10DF4D;
+  border-color: #10DF4D;
+  border-radius: 4px;
+}
+
+/*------------------------------REGISTER END------------------------------*/
+
+/*------------------------------LOGIN------------------------------*/
+
+.loginPage{
+  height: 100%;
+  text-align: center;
+}
+
+/*------------------------------LOGIN END------------------------------*/
+
+/*------------------------------REGISTER_GROUP------------------------------*/
+.registerGroupLogo{
+  text-align: center;
+  margin: 20px 0px 50px 0px;
+}
+.welcome_message{
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top:5%;
+}
+.registerGroupMessage{
+  color: white;
+  text-align: center;
+}
+/*------------------------------REGISTER_GROUP END------------------------------*/
