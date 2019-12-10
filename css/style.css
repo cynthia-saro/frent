@@ -50,6 +50,56 @@ ul.navbar-nav.mr-auto{
 .card-body.mx-auto{
   text-align: center;
 }
+.addObjectButton{
+  position: fixed;
+	width: 100vw;
+	bottom: 0;
+  background-color: LawnGreen;
+  padding: 3%;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+#homePage{
+  padding: 2%;
+}
+
+h1.groupName{
+  text-align: center;
+  color: #707070;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.allProdutsText{
+  color: #707070;
+}
+
+/*Content : All objects display*/
+
+.homeContentObjects{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  justify-content: space-around;
+  padding: 5px;
+}
+
+.object{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  align-items: center;
+  border: 1px solid lightslategrey; 
+}
+
+img.productPicture{
+  width: 170px;
+  height: 170px;
+}
+
+
 /*------------------------------INDEX END------------------------------*/
 
 /*------------------------------REGISTER------------------------------*/
@@ -114,6 +164,8 @@ ul.navbar-nav.mr-auto{
 
 /*------------------------------LOGIN END------------------------------*/
 
+
+
 /*------------------------------REGISTER_GROUP------------------------------*/
 .registerGroupLogo{
   text-align: center;
@@ -131,3 +183,63 @@ ul.navbar-nav.mr-auto{
   text-align: center;
 }
 /*------------------------------REGISTER_GROUP END------------------------------*/
+
+
+
+
+/*--------------------------------------------------OTHER PAGES--------------------------------------------------*/
+.pageName{
+  text-align: center;
+  color: #707070;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/***My_group***/
+.infoGroup{
+  margin: 10px;
+}
+
+.groupDate{
+  font-size: 0.8rem;
+}
+
+.groupDescription{
+  font-size: 0.9rem;
+}
+.groupModify{
+  padding: 2%;
+  background-color: #FFF700;
+  width: 30%;
+}
+/*****************MEDIA QUERIES*********************/
+
+/*Iphone 5*/
+@media screen and (max-width: 320px) {
+  img.productPicture{
+    width: 130px;
+    height: 130px;
+  }
+}
+
+/*Galaxy S5*/
+@media screen and (min-width: 321px) and (max-width: 380px) {
+  img.productPicture{
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/*Tablette et pc*/
+@media screen and (min-width: 1000px) and (max-width: 5120px){
+  img.productPicture {
+    width: 300px;
+    height: 300px;
+  }
+
+  .headerIcons{
+    position: absolute;
+    right: 0px;
+    margin-right: 30px;
+  }
+}

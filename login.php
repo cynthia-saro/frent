@@ -27,7 +27,7 @@ include("php/db.php");
 						<div class="input-group-prepend">
 							<span class="input-group-text"> <i class="fa fa-users"></i> </span>
 						</div>
-						<input name="user_groupID" class="form-control" placeholder="Indentifiant du groupe" type="text">
+						<input name="group" id="group" class="form-control" placeholder="Indentifiant du groupe" type="text">
 					</div>
 					
 					<!-----Email---->
@@ -35,7 +35,7 @@ include("php/db.php");
 						<div class="input-group-prepend">
 							<span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
 						</div>
-						<input name="user_email" class="form-control" placeholder="Email" type="email">
+						<input name="email" id="email"  class="form-control" placeholder="Email" type="email">
 					</div>
 
 					<!------Password------>
@@ -43,12 +43,12 @@ include("php/db.php");
 						<div class="input-group-prepend">
 							<span class="input-group-text"> <i class="fa fa-lock"></i> </span>
 						</div>
-						<input class="form-control" placeholder="Mot de passe" type="password">
+						<input name="password" id="password" class="form-control" placeholder="Mot de passe" type="password">
 					</div>
 
 					<!------BUTTON------->
 					<div class="form-group">
-						<button type="submit" class="btn btn-primary btn-block"> Se connecter </button>
+						<button type="submit" class="btn btn-primary btn-block"  action="php/login.php"> Se connecter </button>
 					</div>
 
 				</form>

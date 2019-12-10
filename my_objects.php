@@ -1,7 +1,10 @@
-<?php include("layouts/head.php");
- include("php/db.php");
- include("php/get_objects.php");
+<?php
+  include("php/db.php");
+  //MODIFIER AVEC FONCTION QUI RECUPERE MES OBJETS
+  include("php/get_objects.php"); 
 ?>
+
+<?php include("layouts/head.php");?>
 
   <body>
 
@@ -10,11 +13,11 @@
     <?php include("layouts/header.php");?>
 
     <main id="homePage">
-      <h1 class="groupName">Nom du groupe</h1>
-      <div class="allProdutsText">Tous les produits : </div>
+      <div class="pageName">Mes objets : </div>
       <div class="homeContentObjects">
         <?php
-          foreach ($objects as $object) { /* on parcourt tous les events de la bd [obtenus grace a get_events.php] et pour chacun, on affiche son titre*/
+        /************************************A modifier avec mes objects************************************/
+          foreach ($objects as $object) { 
             ?>
             <a href="info.php?id=<?php echo $object['id'] ?>"><!--href à changer et mettre l'iddugroupe-->
               <div class="object">
@@ -24,6 +27,7 @@
               </div>
             </a>
           <?php } ?>
+          <!--******************************A modifier avec mes objects************************************--->
       </div>
     </main>
 
