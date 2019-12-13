@@ -1,10 +1,8 @@
-<?php
+<?php 
   include("php/db.php");
+  include("layouts/head.php");
   //MODIFIER AVEC FONCTION QUI RECUPERE MES RESERVATIONS
-  include("php/get_objects.php"); 
-?>
-
-<?php include("layouts/head.php");?>
+  include("php/get_objects.php"); ?>
 
   <body>
 

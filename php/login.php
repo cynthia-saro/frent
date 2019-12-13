@@ -21,6 +21,7 @@ if (!empty($_POST)){
 			session_start();
 			$_SESSION['member'] = $member;
 			header("location: ../index.php");
+			exit();
 		}
 		else {
 			$error="Mauvais identifiant";
@@ -32,5 +33,5 @@ if (!empty($_POST)){
 	}
 
 }
-
+header("location: ../login.php");
 ?>

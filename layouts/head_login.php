@@ -1,8 +1,4 @@
-<?php session_start();
-if(empty($_SESSION["member"])){
-  header("location: ./login.php");
-} 
-?>
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html>

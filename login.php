@@ -2,7 +2,7 @@
 include("php/db.php");
 ?>
 
-<?php include("layouts/head.php"); ?>
+<?php include("layouts/head_login.php"); ?>
 
 <body>
 
@@ -52,6 +52,7 @@ include("php/db.php");
 					</div>
 
 				</form>
+				<a class="msg_register" href="register.php">Vous n'avez pas de compte? Inscrivez-vous !</a>
 			</article>
 		</div>
 	</main>
