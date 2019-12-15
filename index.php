@@ -16,7 +16,7 @@
         <?php
           foreach ($objects as $object) { /* on parcourt tous les events de la bd [obtenus grace a get_events.php] et pour chacun, on affiche son titre*/
             ?>
-            <a href="info.php?id=<?php echo $object['id'] ?>"><!--href à changer et mettre l'iddugroupe-->
+            <a href="product.php?id=<?php echo $object['id'] ?>">
               <div class="object">
                 <img class="productPicture" src="<?php echo $object['picture']?>"/>
                 <div class="productName"><?php echo $object['name'] ?></div>

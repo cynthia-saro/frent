@@ -1,10 +1,7 @@
 <?php
   include("php/db.php");
-  //MODIFIER AVEC FONCTION QUI RECUPERE MES OBJETS
-  include("php/get_objects.php"); 
+  include("layouts/head.php");
 ?>
-
-<?php include("layouts/head.php");?>
 
   <body>
 
@@ -15,19 +12,6 @@
     <main id="homePage">
       <div class="pageName">Mes objets : </div>
       <div class="homeContentObjects">
-        <?php
-        /************************************A modifier avec mes objects************************************/
-          foreach ($objects as $object) { 
-            ?>
-            <a href="info.php?id=<?php echo $object['id'] ?>"><!--href à changer et mettre l'iddugroupe-->
-              <div class="object">
-                <img class="productPicture" src="<?php echo $object['picture']?>"/>
-                <div class="productName"><?php echo $object['name'] ?></div>
-                <div class="productStatus"><?php echo $object['status'] ?></div>
-              </div>
-            </a>
-          <?php } ?>
-          <!--******************************A modifier avec mes objects************************************--->
       </div>
     </main>
 

@@ -12,21 +12,7 @@
 
     <main id="homePage">
       <div class="pageName">Mes réservations : </div>
-      <div class="homeContentObjects">
-        <?php
-        /************************************A modifier avec mes réservations************************************/
-          foreach ($objects as $object) { 
-            ?>
-            <a href="info.php?id=<?php echo $object['id'] ?>"><!--href à changer et mettre l'iddugroupe-->
-              <div class="object">
-                <img class="productPicture" src="<?php echo $object['picture']?>"/>
-                <div class="productName"><?php echo $object['name'] ?></div>
-                <div class="productStatus"><?php echo $object['status'] ?></div>
-              </div>
-            </a>
-          <?php } ?>
-          <!--******************************A modifier avec mes réservations************************************--->
-      </div>
+
     </main>
 
     <a href="#"><div class="addObjectButton">Ajouter un produit</div></a>

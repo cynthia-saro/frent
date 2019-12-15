@@ -1,16 +1,26 @@
 <?php
-//recupere les derniers objets dans la bdd, on les classe par date dans l'ordre decroissant
+$iduser = $_SESSION['member']['id'];
 
-//MODIFIER AVEC UN WHERE QUI VERIFIE L'ID DE L'UTILISATEUR
-$sql="SELECT *
-      FROM groups_information";
-//envoie la requête à MySQL, sans l'executer
+//requete pour récuperer les informations du groupe de la personne connectée
+$sql="SELECT * 
+      FROM groups_information
+      WHERE identification_key = (
+            SELECT users.user_group
+            FROM users
+            WHERE users.id = :iduser)";
 $stmt = $conn->prepare($sql);
-//demande à MySQL de l'executer
+$stmt-> bindValue(":iduser", $iduser);
 $stmt->execute();
-//va chercher les résultats chez MySQL
 $mygroup = $stmt->fetch();
 
-//METTRE FETCH ALL QUAND LA REQUETTE SERA CORRECTE
-//$mygroup = $stmt->fetchAll();
+
+//requete pour avoir tous les membres du groupe
+$sql="SELECT * 
+      FROM users
+      WHERE user_group = (SELECT user_group from users Where id= :iduser)";
+$stmt = $conn->prepare($sql);
+$stmt-> bindValue(":iduser", $iduser);
+$stmt->execute();
+$mygroupmembers = $stmt->fetchAll();
+
 ?>
