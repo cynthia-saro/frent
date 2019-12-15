@@ -1,6 +1,7 @@
 <?php include("layouts/head.php");
  include("php/db.php");
  include("php/get_objects.php");
+ include("php/get_myGroup.php");
 ?>
 
   <body>
@@ -10,7 +11,7 @@
     <?php include("layouts/header.php");?>
 
     <main id="homePage">
-      <h1 class="groupName">Nom du groupe</h1>
+      <h1 class="groupName"><?php echo $mygroup["name"] ?></h1>
       <div class="allProdutsText">Tous les produits : </div>
       <div class="homeContentObjects">
         <?php

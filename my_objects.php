@@ -12,6 +12,7 @@
     <main id="homePage">
       <div class="pageName">Mes objets : </div>
       <div class="homeContentObjects">
+        TO DO
       </div>
     </main>
 

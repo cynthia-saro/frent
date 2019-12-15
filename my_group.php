@@ -24,7 +24,7 @@ include("php/get_myGroup.php");
     <div class="allMembers">
         <?php foreach ($mygroupmembers as $groupmember) {
           ?>
-          <a href="#">
+          <a href="profil.php?iduser=<?php echo $groupmember['id'] ?>">
             <img class="productPicture" src="<?php echo $groupmember['picture']?>"/>
             <div><?php echo $groupmember['first_name'] . '&nbsp' . $groupmember['last_name'] ?></div>
             <div><?php echo $groupmember['email'] ?></div>
@@ -33,11 +33,6 @@ include("php/get_myGroup.php");
     </div>
 
   </main>
-
-  <a href="#">
-    <div class="addObjectButton">Ajouter un produit</div>
-  </a>
-
 
   <?php include("layouts/footer.php"); ?>
 

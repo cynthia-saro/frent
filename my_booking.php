@@ -1,8 +1,7 @@
 <?php 
   include("php/db.php");
   include("layouts/head.php");
-  //MODIFIER AVEC FONCTION QUI RECUPERE MES RESERVATIONS
-  include("php/get_objects.php"); ?>
+?>
 
   <body>
 
@@ -12,7 +11,9 @@
 
     <main id="homePage">
       <div class="pageName">Mes réservations : </div>
-
+      <div class="homeContentObjects">
+        TO DO
+      </div>
     </main>
 
     <a href="#"><div class="addObjectButton">Ajouter un produit</div></a>

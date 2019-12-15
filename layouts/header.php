@@ -6,7 +6,7 @@
 
   <a class="navbar-brand logo" href="index.php"><img src="img/frent.png"></a>
 
-  <a class="headerIcons" href="#">
+  <a class="headerIcons" href="my_profil.php">
     <img src="img/user-symbol.png">
   </a>
   

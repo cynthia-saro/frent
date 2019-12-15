@@ -34,7 +34,7 @@ include("php/db.php");
 							<span class="input-group-text"> <i class="fa fa-user"></i> </span>
 						</div>
 						<input name="first_name" id="first_name" class="form-control" placeholder="Prénom" type="text">
-						<!---Errors to define in the folder "php"---->
+						<!---Errors---->
 						<?php if(isset($_SESSION['errors']) && array_key_exists('first_name', $_SESSION['errors'])){ ?>
 							<div class="alert alert-danger mt-2">
 								<?php echo $_SESSION['errors']['first_name']; ?>

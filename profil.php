@@ -1,8 +1,8 @@
 <?php
   include("php/db.php");
+  include("layouts/head.php");
+  include("php/get_profilInformation.php");
 ?>
-
-<?php include("layouts/head.php");?>
 
   <body>
 
@@ -12,22 +12,21 @@
 
     <main id="homePage">
       <div class="introProfil">
-          <img class="profilImage" src="https://images.pexels.com/photos/556663/pexels-photo-556663.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"/>
+          <img class="profilImage" src="<?php echo $profilinformation['picture']?>"/>
           <div class="introProfilContent">
-              <div class="firstNameAndLastName">Nom Prénom</div>
-              <div class="profilEmail">Email</div>
-              <div class="phoneNumber">Numéro de téléphone</div>
-              <a href="#" class="profilGoEdit">Modifier</a>
+              <div class="firstNameAndLastName"><?php echo $profilinformation["first_name"] . '&nbsp ' . $profilinformation["last_name"] ?></div>
+              <div class="profilEmail"><?php echo $profilinformation["email"] ?></div>
+              <div class="phoneNumber">0<?php echo $profilinformation["phone_number"] ?></div>
           </div>
       </div>
       <div class="homeContentObjects">
-        <div>Mes objets :</div>
+        <div>Ses objets :</div>
       </div>
       <div class="homeContentObjects">
-          <div>Mes réservations : </div>
+          <div>Ses réservations : </div>
       </div>
       <div class="homeContentObjects">
-          <div>Mes favoris : </div>
+          <div>Ses favoris : </div>
       </div>
 
     </main>
