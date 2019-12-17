@@ -1,8 +1,6 @@
 <?php
 include("php/db.php");
-?>
-
-<?php include("layouts/head_login.php"); ?>
+include("layouts/head_login.php"); ?>
 
 <body>
 
@@ -15,7 +13,7 @@ include("php/db.php");
 		<div class="card bg-light">
 
 			<!-- <input type="button" value="Go back!" onclick="history.back()"> -->
-
+			<a href="javascript:history.back()" class="registerReturn">retour</a>
 			<div class="registerLogo">
 				<img src="img/frent.png">
 			</div>
@@ -50,7 +48,7 @@ include("php/db.php");
 						<input name="last_name" id="last_name"  class="form-control" placeholder="Nom" type="text">
 						<?php if(isset($_SESSION['errors']) && array_key_exists('last_name', $_SESSION['errors'])){ ?>
 							<div class="alert alert-danger mt-2">
-								<?php echo $_SESSION['errors']['last-name']; ?>
+								<?php echo $_SESSION['errors']['last_name']; ?>
 							</div>
 						<?php } ?>
 					</div>
@@ -102,7 +100,7 @@ include("php/db.php");
 						<input name="password_verif" id="password_verif" class="form-control" placeholder="Valider le mot de passe" type="password">
 						<?php if(isset($_SESSION['errors']) && array_key_exists('password_verif', $_SESSION['errors'])){ ?>
 							<div class="alert alert-danger mt-2">
-								<?php echo $_SESSION['errors']['password_verif']; ?>
+								<?php echo $_SESSION['errors']['passwords']; ?>
 							</div>
 						<?php } ?>
 					</div>

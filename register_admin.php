@@ -13,6 +13,7 @@ include("php/db.php");
 
 		<div class="card bg-light">
 
+		    <a href="javascript:history.back()" class="registerReturn">retour</a>
 			<div class="registerLogo">
 				<img src="img/frent.png">
 			</div>

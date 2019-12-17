@@ -24,6 +24,10 @@
           <a href="tel:0<?php echo $creator['phone_number'] ?>"><i class="fa fa-phone"></i></a>
         </div>    
         <div>Ajouter en favoris</div>
+        <!---if it is my product : i can delete it--->
+        <?php if($_SESSION['member']['id'] ==  $creator['id']){?>
+          <button type="button" class="btn btn-light"><a href="edit_object.php?id=<?php echo $productinfo['id']?>">MODIFIER</a></button>
+        <?php } ?>
       <?php } ?>
     </main>
 

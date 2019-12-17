@@ -16,7 +16,7 @@
       </div>
     </main>
 
-    <a href="#"><div class="addObjectButton">Ajouter un produit</div></a>
+    <a href="create_object.php"><div class="addObjectButton">Ajouter un produit</div></a>
 
 
     <?php include("layouts/footer.php");?>
