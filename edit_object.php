@@ -18,15 +18,14 @@ include("php/get_productinfo.php");
         <div class="">Modifier mon object</div>
 
         <!---Form---->
-        <form method="post" action="php/edit_object.php">
+        <form method="post" action="php/edit_object.php?id=<?php echo $id?>">
           <!---Post n'affiche pas les infos--->
 
           <!----productStatus---->
           <div class="form-group input-group">
             <select class="form-control" name="productStatus" id="productStatus" >
-              <option value="<?php echo $productinfo['status'] ?>" disabled selected hidden ><?php echo $productinfo['status'] ?></option>
-              <option>Réservé</option>
-              <option>Disponible</option>
+              <option <?php if($productinfo['status']=="Réservé"){echo "selected";}?>>Réservé</option>
+              <option <?php if($productinfo['status']=="Disponible"){echo "selected";}?>>Disponible</option>
             </select>
             <!-- <input name="productStatus" id="productStatus" class="form-control" placeholder="État de l'object" type="text"> -->
             <?php if (isset($_SESSION['errors']) && array_key_exists('productStatus', $_SESSION['errors'])) { ?>
@@ -62,11 +61,10 @@ include("php/get_productinfo.php");
             </div>
             <select class="form-control" name="productCondition" id="productCondition">
               <option value="<?php echo $productinfo['obj_condition'] ?>" disabled selected hidden><?php echo $productinfo['obj_condition'] ?></option>
-              <option>Neuf</option>
-              <option>Très bon état</option>
-              <option>Correct</option>
+              <option <?php if($productinfo['obj_condition']=="Neuf"){echo "selected";}?>>Neuf</option>
+              <option <?php if($productinfo['obj_condition']=="Très bon état"){echo "selected";}?>>Très bon état</option>
+              <option <?php if($productinfo['obj_condition']=="Correct"){echo "selected";}?>>Correct</option>
             </select>
-            <!-- <input name="productCondition" id="productCondition" class="form-control" placeholder="État de l'object" type="text"> -->
             <?php if (isset($_SESSION['errors']) && array_key_exists('productCondition', $_SESSION['errors'])) { ?>
               <div class="alert alert-danger mt-2">
                 <?php echo $_SESSION['errors']['productCondition']; ?>

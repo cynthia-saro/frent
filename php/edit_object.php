@@ -1,14 +1,13 @@
 <?php
 include("db.php");
 session_start();
-$error="";
 $id = $_GET['id'];
 
 if (isset($_POST)) {
     //We create variables
     $productStatus = $_POST['productStatus'];
     $pictureProduct = $_POST['pictureProduct'];
-	$productName = $_POST['productName'];
+  	$productName = $_POST['productName'];
     $productCondition = $_POST['productCondition'];
     $productDescription = $_POST['productDescription'];
 
@@ -49,11 +48,13 @@ if (isset($_POST)) {
         $stmt->bindValue(":productStatus", $productStatus);
         $stmt->bindValue(":id", $id);
 
-		$stmt->execute();
+    $stmt->execute();
 
 		header('Location: ../index.php');
 	} else {
-		header('Location: ../edit_object.php?id='.$id);
+    header('Location: ../edit_object.php?id='.$id);
+    unset($_SESSION['errors']);
+
 	}
 	
 }
