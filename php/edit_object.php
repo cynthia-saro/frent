@@ -37,16 +37,16 @@ if (isset($_POST)) {
 	if (empty($_SESSION['errors'])) {
 
 		$sql="UPDATE objects
-        SET name = :productName, picture = :pictureProduct, obj_condition = :productCondition, description = :productDescription, status = :productStatus
-		WHERE id = :id";
+          SET name = :productName, picture = :pictureProduct, obj_condition = :productCondition, description = :productDescription, status = :productStatus
+		      WHERE id = :id";
 
 		$stmt = $conn->prepare($sql);
 		$stmt->bindValue(":productName", $productName);
 		$stmt->bindValue(":pictureProduct", $pictureProduct);
-        $stmt->bindValue(":productCondition", $productCondition);
-        $stmt->bindValue(":productDescription", $productDescription);
-        $stmt->bindValue(":productStatus", $productStatus);
-        $stmt->bindValue(":id", $id);
+    $stmt->bindValue(":productCondition", $productCondition);
+    $stmt->bindValue(":productDescription", $productDescription);
+    $stmt->bindValue(":productStatus", $productStatus);
+    $stmt->bindValue(":id", $id);
 
     $stmt->execute();
 
