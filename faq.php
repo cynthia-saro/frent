@@ -22,7 +22,7 @@ include("php/db.php");
                 <div id="question0" class="panel-collapse collapse" style="height: 0px;">
                     <div class="panel-body">
 
-                        <p>Pour ajouter un produit, il suffit de se rendre sur la <a href="index.php">page d’accueil</a> en cliquant sur le logo dans la barre de navigation. Un bouton vert est fixé en bas de l’écran, il vous redirigera vers la page de création d’un produit. Ce bouton est également visible sur les pages “mes objets”, “mes réservations”, “mes favoris”.</p>
+                        <p>Pour ajouter un produit, il suffit de se rendre sur la <a href="index.php">page d’accueil</a> en cliquant sur le logo dans la barre de navigation. Un bouton vert est fixé en bas de l’écran, il vous redirigera vers la page de création d’un produit. Ce bouton est également visible sur les pages “mes objets” et “mes réservations”.</p>
                     </div>
                 </div>
             </div>

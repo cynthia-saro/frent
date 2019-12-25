@@ -192,7 +192,13 @@ img.profilImage{
   border-radius:50px;
 }
 
+.filterBar a{
+  background: lightskyblue center center no-repeat;
+}
 
+.filterBar a.active{
+  background-color:lightgreen;
+}
 
 /*-----------------------------------PRODUCT-------------------------------------*/
 
@@ -206,7 +212,6 @@ img.profilImage{
 .objFree{
   color: green;
 }
-
 /*--------------------------------------------------OTHER PAGES--------------------------------------------------*/
 .pageName{
   text-align: center;

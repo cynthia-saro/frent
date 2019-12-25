@@ -19,9 +19,6 @@
         <a class="nav-link" href="my_booking.php">Mes réservations</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="my_favs.php">Mes favoris</a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" href="my_group.php">Mon groupe</a>
       </li>
       <li class="nav-item">
