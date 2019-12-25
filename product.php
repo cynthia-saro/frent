@@ -14,7 +14,12 @@
       <?php if(isset($productinfo['id'])){?>
         <img class="productPicture" src="<?php echo $productinfo['picture']?>"/>
         <div><?php echo $productinfo["name"] ?></div> 
-        <div><?php echo $productinfo["status"]?></div>
+        <?php if ($productinfo["status"] == "Réservé"){ ?>
+          <div class="objBooked"><?php echo $productinfo["status"]?></div>
+        <?php } ?>
+        <?php if ($productinfo["status"] == "Disponible"){ ?>
+          <div class="objFree"><?php echo $productinfo["status"]?></div>
+        <?php } ?>
         <div>État : <?php echo $productinfo["obj_condition"]?></div>    
         <div><?php echo $productinfo["description"]?></div> 
         <div>Proposé par : <a href="profil.php?iduser=<?php echo $creator['id'] ?>"> <?php echo $creator["first_name"] . "&nbsp" . $creator["last_name"]?></a></div> 

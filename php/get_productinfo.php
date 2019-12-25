@@ -1,5 +1,5 @@
 <?php
-/*--faire une requete qui permet de recuperer les infos de le produit en question---- */
+/*--faire une requete qui permet de recuperer les infos du produit en question---- */
 $id = $_GET['id'];
 $sql = "SELECT *
         FROM objects

@@ -200,7 +200,12 @@ img.profilImage{
   padding: 7%;
   text-align: center;
 }
-
+.objBooked{
+  color: red;
+}
+.objFree{
+  color: green;
+}
 
 /*--------------------------------------------------OTHER PAGES--------------------------------------------------*/
 .pageName{

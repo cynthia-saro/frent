@@ -2,6 +2,7 @@
 include("php/db.php");
 include("layouts/head.php");
 include("php/get_productinfo.php");
+include("php/get_myGroup.php");
 ?>
 
 <body>
@@ -24,10 +25,9 @@ include("php/get_productinfo.php");
           <!----productStatus---->
           <div class="form-group input-group">
             <select class="form-control" name="productStatus" id="productStatus" >
-              <option <?php if($productinfo['status']=="Réservé"){echo "selected";}?>>Réservé</option>
-              <option <?php if($productinfo['status']=="Disponible"){echo "selected";}?>>Disponible</option>
+              <option value="Réservé" <?php if($productinfo['status']=="Réservé"){echo "selected";}?>>Réservé</option>
+              <option value="Disponible" <?php if($productinfo['status']=="Disponible"){echo "selected";}?>>Disponible</option>
             </select>
-            <!-- <input name="productStatus" id="productStatus" class="form-control" placeholder="État de l'object" type="text"> -->
             <?php if (isset($_SESSION['errors']) && array_key_exists('productStatus', $_SESSION['errors'])) { ?>
               <div class="alert alert-danger mt-2">
                 <?php echo $_SESSION['errors']['productStatus']; ?>
@@ -35,6 +35,30 @@ include("php/get_productinfo.php");
             <?php } ?>
           </div>
 
+          
+          <!----booker---->
+          <!--Scripts-->
+          <?php include("layouts/scripts.php"); ?>
+          <div class="form-group input-group" id="selectabooker">
+            <select class="form-control" name="booker" id="booker" >
+              <option value="" selected>Loué par</option>
+              <?php foreach ($mygroupmembers as $groupmember) {?>
+                <option value="<?php echo $groupmember['id']?>"><?php echo $groupmember['first_name'] . "&nbsp" . $groupmember['last_name']?></option>
+              <?php } ?>
+            </select>
+            <?php if (isset($_SESSION['errors']) && array_key_exists('booker', $_SESSION['errors'])) { ?>
+              <div class="alert alert-danger mt-2">
+                <?php echo $_SESSION['errors']['booker']; ?>
+              </div>
+            <?php } ?>
+          </div>
+          <script>
+              $("#productStatus").change(function() {
+                  if ( $("#productStatus").val() == "Réservé" ){ document.getElementById("selectabooker").style.display = "flex"; }
+                  if ( $("#productStatus").val() == "Disponible" ){ document.getElementById("selectabooker").style.display = "none"; }
+              });
+          </script>
+          
           <!------pictureProduct------>
           <div class="form-group input-group">
             <input name="pictureProduct" id="pictureProduct" class="form-control" placeholder="photo" type="text" value="<?php echo $productinfo['picture'] ?>">
@@ -104,9 +128,6 @@ include("php/get_productinfo.php");
   </main>
 
   <?php include("layouts/footer.php"); ?>
-
-  <!--Scripts-->
-  <?php include("layouts/scripts.php"); ?>
 
 </body>
 
