@@ -15,13 +15,15 @@ include("layouts/head.php");
       <div class="">Ajouter un object</div>
 
       <!---Form---->
-      <form method="post" action="php/create_object.php">
+      <form method="post" enctype="multipart/form-data" action="php/create_object.php">
         <!---Post n'affiche pas les infos--->
 
 
         <!------pictureProduct------>
         <div class="form-group input-group">
-          <input name="pictureProduct" id="pictureProduct" class="form-control" placeholder="photo" type="text">
+        <!-- <input type="file" name="fileToUpload" id="fileToUpload"> -->
+          <input type="file" name="fileToUpload" id="fileToUpload">
+          <!-- <input name="pictureProduct" id="pictureProduct" class="form-control" placeholder="photo" type="text"> -->
         </div>
 
         <!----productName---->
@@ -72,10 +74,10 @@ include("layouts/head.php");
 
         <!------BUTTONS------->
         <div>
-          <a href="javascript:history.back()">Annuler</a>
           <div class="form-group">
             <button type="submit" class="btn btn-primary btn-block">Ajouter</button>
           </div>
+          <a href="index.php">Annuler</a>
         </div>
 
 

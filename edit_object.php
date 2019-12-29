@@ -111,7 +111,7 @@ include("php/get_myGroup.php");
 
           <!------BUTTONS------->
           <div>
-            <a href="javascript:history.back()">Annuler</a>
+            <a href="product.php?id=<?php echo $productinfo['id'] ?>">Annuler</a>
             <div class="form-group">
               <button type="submit" class="btn btn-primary btn-block">Modifier</button>
             </div>
