@@ -18,7 +18,6 @@ include("layouts/head.php");
       <form action="php/create_object.php" method="POST" enctype="multipart/form-data">
         <!---Post n'affiche pas les infos--->
 
-
         <!------pictureProduct------>
         <div class="form-group input-group">
           <input type="hidden" name="MAX_FILE_SIZE" value="3000000000" />
