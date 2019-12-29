@@ -15,15 +15,20 @@ include("layouts/head.php");
       <div class="">Ajouter un object</div>
 
       <!---Form---->
-      <form method="post" enctype="multipart/form-data" action="php/create_object.php">
+      <form action="php/create_object.php" method="POST" enctype="multipart/form-data">
         <!---Post n'affiche pas les infos--->
 
 
         <!------pictureProduct------>
         <div class="form-group input-group">
-        <!-- <input type="file" name="fileToUpload" id="fileToUpload"> -->
-          <input type="file" name="fileToUpload" id="fileToUpload">
-          <!-- <input name="pictureProduct" id="pictureProduct" class="form-control" placeholder="photo" type="text"> -->
+          <input type="hidden" name="MAX_FILE_SIZE" value="3000000000" />
+          <input type="file" name="pictureProduct" id="pictureProduct">
+          <!---Errors---->
+          <?php if (isset($_SESSION['errors']) && array_key_exists('pictureProduct', $_SESSION['errors'])) { ?>
+            <div class="alert alert-danger mt-2">
+              <?php echo $_SESSION['errors']['pictureProduct']; ?>
+            </div>
+          <?php } ?>
         </div>
 
         <!----productName---->
