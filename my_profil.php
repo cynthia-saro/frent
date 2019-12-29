@@ -19,7 +19,7 @@ include("php/get_myProfilInfo.php");
         <div class="phoneNumber">0<?php echo $myprofilinformation["phone_number"] ?></div>
       </div>
       <div>
-        <a href="#" class="profilGoEdit">Modifier</a>
+        <a href="edit_profil.php" class="profilGoEdit">Modifier</a>
         <a href="php/logout.php" class="profilGoEdit">Se déconnecter</a>
       </div>
     </div>
