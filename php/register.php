@@ -12,9 +12,10 @@ if (isset($_POST)) {
 	$email = $_POST['email'];
 	$password = $_POST['password'];
     $password_verif = $_POST['password_verif'];
-    $picturePicker = $_POST['picturePicker'];
     $group = $_POST['group'];
-
+    /**IMAGE**/
+    $uploaddir = '../img/profils/';
+    $uploadfile = $uploaddir . $_FILES['picturePicker']['name'];
 
     //first_name 
 	if (empty($first_name)) {
@@ -54,10 +55,10 @@ if (isset($_POST)) {
     }
 
 	// If there are no errors :
-	if (empty($_SESSION['errors'])) {
+	if (empty($_SESSION['errors']) && move_uploaded_file($_FILES['picturePicker']['tmp_name'], $uploadfile)) {
 
 		$sql="INSERT INTO users (first_name, last_name, email, phone_number, password, picture, user_group, date_created)
-		VALUES (:first_name, :last_name, :email, :phone_number, :password, :picturePicker, :group, NOW())";
+		VALUES (:first_name, :last_name, :email, :phone_number, :password, :uploadfile, :group, NOW())";
 
 		$stmt = $conn->prepare($sql);
 		$stmt->bindValue(":first_name", $first_name);
@@ -67,7 +68,7 @@ if (isset($_POST)) {
 		//password crypt
 		$password = password_hash($password, PASSWORD_DEFAULT,['cost' => 15]);
         $stmt->bindValue(":password", $password);
-        $stmt->bindValue(":picturePicker", $picturePicker);
+        $stmt->bindValue(":uploadfile", $uploadfile);
         $stmt->bindValue(":group", $group);
 
 		$stmt->execute();

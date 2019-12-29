@@ -23,7 +23,7 @@ include("layouts/head_login.php"); ?>
 				<h4 class="card-title mt-3 text-center">S'inscrire</h4>
 
 				<!---Form---->
-				<form method="post" action="php/register.php">
+				<form method="post" action="php/register.php" enctype="multipart/form-data">
 					<!---Post n'affiche pas les infos--->
 
 					<!----first name---->
@@ -33,7 +33,7 @@ include("layouts/head_login.php"); ?>
 						</div>
 						<input name="first_name" id="first_name" class="form-control" placeholder="Prénom" type="text">
 						<!---Errors---->
-						<?php if(isset($_SESSION['errors']) && array_key_exists('first_name', $_SESSION['errors'])){ ?>
+						<?php if (isset($_SESSION['errors']) && array_key_exists('first_name', $_SESSION['errors'])) { ?>
 							<div class="alert alert-danger mt-2">
 								<?php echo $_SESSION['errors']['first_name']; ?>
 							</div>
@@ -45,8 +45,8 @@ include("layouts/head_login.php"); ?>
 						<div class="input-group-prepend">
 							<span class="input-group-text"> <i class="fa fa-user"></i> </span>
 						</div>
-						<input name="last_name" id="last_name"  class="form-control" placeholder="Nom" type="text">
-						<?php if(isset($_SESSION['errors']) && array_key_exists('last_name', $_SESSION['errors'])){ ?>
+						<input name="last_name" id="last_name" class="form-control" placeholder="Nom" type="text">
+						<?php if (isset($_SESSION['errors']) && array_key_exists('last_name', $_SESSION['errors'])) { ?>
 							<div class="alert alert-danger mt-2">
 								<?php echo $_SESSION['errors']['last_name']; ?>
 							</div>
@@ -58,8 +58,8 @@ include("layouts/head_login.php"); ?>
 						<div class="input-group-prepend">
 							<span class="input-group-text"> <i class="fa fa-phone"></i> </span>
 						</div>
-						<input name="phone_number" id="phone_number"  class="form-control" placeholder="Numéro de téléphone" type="tel">
-						<?php if(isset($_SESSION['errors']) && array_key_exists('phone_number', $_SESSION['errors'])){ ?>
+						<input name="phone_number" id="phone_number" class="form-control" placeholder="Numéro de téléphone" type="tel">
+						<?php if (isset($_SESSION['errors']) && array_key_exists('phone_number', $_SESSION['errors'])) { ?>
 							<div class="alert alert-danger mt-2">
 								<?php echo $_SESSION['errors']['phone_number']; ?>
 							</div>
@@ -72,7 +72,7 @@ include("layouts/head_login.php"); ?>
 							<span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
 						</div>
 						<input name="email" id="email" class="form-control" placeholder="Email" type="email">
-						<?php if(isset($_SESSION['errors']) && array_key_exists('email', $_SESSION['errors'])){ ?>
+						<?php if (isset($_SESSION['errors']) && array_key_exists('email', $_SESSION['errors'])) { ?>
 							<div class="alert alert-danger mt-2">
 								<?php echo $_SESSION['errors']['email']; ?>
 							</div>
@@ -85,7 +85,7 @@ include("layouts/head_login.php"); ?>
 							<span class="input-group-text"> <i class="fa fa-lock"></i> </span>
 						</div>
 						<input name="password" id="password" class="form-control" placeholder="Mot de passe" type="password">
-						<?php if(isset($_SESSION['errors']) && array_key_exists('password', $_SESSION['errors'])){ ?>
+						<?php if (isset($_SESSION['errors']) && array_key_exists('password', $_SESSION['errors'])) { ?>
 							<div class="alert alert-danger mt-2">
 								<?php echo $_SESSION['errors']['password']; ?>
 							</div>
@@ -98,7 +98,7 @@ include("layouts/head_login.php"); ?>
 							<span class="input-group-text"> <i class="fa fa-lock"></i> </span>
 						</div>
 						<input name="password_verif" id="password_verif" class="form-control" placeholder="Valider le mot de passe" type="password">
-						<?php if(isset($_SESSION['errors']) && array_key_exists('password_verif', $_SESSION['errors'])){ ?>
+						<?php if (isset($_SESSION['errors']) && array_key_exists('password_verif', $_SESSION['errors'])) { ?>
 							<div class="alert alert-danger mt-2">
 								<?php echo $_SESSION['errors']['passwords']; ?>
 							</div>
@@ -111,23 +111,17 @@ include("layouts/head_login.php"); ?>
 							<span class="input-group-text"> <i class="fa fa-user"></i> </span>
 						</div>
 						<input name="group" id="group" class="form-control" placeholder="Identifiant de groupe" type="text">
-						<?php if(isset($_SESSION['errors']) && array_key_exists('group', $_SESSION['errors'])){ ?>
+						<?php if (isset($_SESSION['errors']) && array_key_exists('group', $_SESSION['errors'])) { ?>
 							<div class="alert alert-danger mt-2">
 								<?php echo $_SESSION['errors']['group']; ?>
 							</div>
 						<?php } ?>
 					</div>
 
-					<!------Picture------>
-					<!-- <div class="form-group input-group">
-						<input type="hidden" name="MAX_FILE_SIZE" value="30000" />
-						<input name="picturePicker" type="file">
-					</div> -->
+					<!------picturePicker------>
 					<div class="form-group input-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"> <i class="fa fa-user"></i> </span>
-						</div>
-						<input name="picturePicker" id="picturePicker" class="form-control" placeholder="photo" type="text">
+						<input type="hidden" name="MAX_FILE_SIZE" value="3000000000" />
+						<input type="file" name="picturePicker" id="picturePicker">
 					</div>
 
 					<!------BUTTON------->
