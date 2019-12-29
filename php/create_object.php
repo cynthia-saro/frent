@@ -16,10 +16,6 @@ if (isset($_POST)) {
     $uploaddir = '../img/products/';
     $uploadfile = $uploaddir . $_FILES['pictureProduct']['name'];
 
-    //pictureProduct
-    if (empty($pictureProduct)) {
-        $_SESSION['errors']['pictureProduct'] = "Ce champ est obligatoire";
-    }
     //productName
     if (empty($productName)) {
         $_SESSION['errors']['productName'] = "Ce champ est obligatoire";
