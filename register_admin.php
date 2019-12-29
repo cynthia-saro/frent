@@ -23,7 +23,7 @@ include("php/db.php");
 				<h4 class="card-title mt-3 text-center">S'inscrire en tant qu'admin</h4>
 
 				<!---Form---->
-				<form method="post" action="php/register_admin.php">
+				<form method="post" action="php/register_admin.php" enctype="multipart/form-data">
 					<!---Post n'affiche pas les infos--->
 
 					<!----first name---->
@@ -105,16 +105,10 @@ include("php/db.php");
 						<?php } ?>
 					</div>
 
-					<!------Picture------>
-					<!-- <div class="form-group input-group">
-						<input type="hidden" name="MAX_FILE_SIZE" value="30000" />
-						<input name="picturePicker" type="file">
-					</div> -->
+					<!------picturePicker------>
 					<div class="form-group input-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"> <i class="fa fa-user"></i> </span>
-						</div>
-						<input name="picturePicker" id="picturePicker" class="form-control" placeholder="photo" type="text">
+						<input type="hidden" name="MAX_FILE_SIZE" value="3000000000" />
+						<input type="file" name="picturePicker" id="picturePicker">
 					</div>
 
 					<!--------------------------------CREATE A GROUP----------------------------------->
