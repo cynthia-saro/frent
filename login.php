@@ -21,14 +21,6 @@ include("php/db.php");
 
 				<!---Form---->
 				<form method="post" action="php/login.php">
-
-					<!-----Group---->
-					<div class="form-group input-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"> <i class="fa fa-users"></i> </span>
-						</div>
-						<input name="group" id="group" class="form-control" placeholder="Indentifiant du groupe" type="text">
-					</div>
 					
 					<!-----Email---->
 					<div class="form-group input-group">
