@@ -23,4 +23,13 @@ $stmt-> bindValue(":iduser", $iduser);
 $stmt->execute();
 $mygroupmembers = $stmt->fetchAll();
 
+//requete pour avoir le nom et prénom de l'admin
+$adminId = $mygroup['adminId'];
+$sql="SELECT id, first_name, last_name
+      FROM users
+      WHERE id = :adminId";
+$stmt = $conn->prepare($sql);
+$stmt-> bindValue(":adminId", $adminId);
+$stmt->execute();
+$admin = $stmt->fetch();
 ?>

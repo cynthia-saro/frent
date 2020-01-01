@@ -17,8 +17,13 @@ include("php/get_myGroup.php");
     <div class="infoGroup">
       <div class="groupDate"><?php echo ("Crée le : ") . $mygroup["date_created"] ?></div>
       <div class="groupDescription"><?php echo $mygroup["group_description"] ?></div>
-      <div class="admin"><?php echo ("Admin : ") ?></div>
-      <div class="groupModify">Modifier</div>
+      <div class="admin">
+        <?php echo ("Admin : ")  ?>
+        <a href="profil.php?iduser=<?php echo $admin['id'] ?>"> <?php echo $admin['first_name'] . "&nbsp" . $admin['last_name'] ?> </a>
+      </div>
+      <?php if ($mygroup["adminId"] == $_SESSION['member']['id']){?>
+        <a href="#" class="groupModify">Modifier</a>
+      <? } ?>
     </div>
 
     <div class="allMembers">
