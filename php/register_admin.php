@@ -1,5 +1,5 @@
 <?php
-require_once("db.php");
+require("db.php");
 session_start();
 $error = "";
 
@@ -104,6 +104,6 @@ if (isset($_POST)) {
 		$_SESSION['email'] = $_POST['email'];
 		header('Location: ../login.php');
 	} else {
-		header('Location: ../register.php');
+		header('Location: ../register_admin.php');
 	}
 }

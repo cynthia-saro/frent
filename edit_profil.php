@@ -73,7 +73,7 @@ include("php/get_myProfilInfo.php");
                         <button type="submit" class="btn btn-primary btn-block">Modifier</button>
                     </div>
                     <a href="my_profil.php">Annuler</a>
-                    <button type="button" class="btn btn-danger"><a href="php/delete_profil.php">Supprimer l'objet</a></button>
+                    <button type="button" class="btn btn-danger"><a href="php/delete_profil.php">Supprimer mon profil</a></button>
                 </div>
             </form>
         </article>
