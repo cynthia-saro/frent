@@ -21,7 +21,7 @@ include("php/get_profilInformation.php");
     </div>
 
     <div class="profilobjects">Ses objets</div>
-    <div id="homeContentObjects">
+    <div class="homeContentObjects">
 
       <?php
       foreach ($profilobjects as $object) {

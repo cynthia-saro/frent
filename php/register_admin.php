@@ -90,14 +90,15 @@ if (isset($_POST)) {
 		$stmt->execute();
 
 		/****Create the group****/
-		$sql = "INSERT INTO groups_information (identificatoin_key, name, group_description, date_created)
-        VALUES (:group, :group_name, :group_description, NOW())";
+		$adminId = $_SESSION['member']['id'];
+		$sql = "INSERT INTO groups_information (identification_key, name, group_description, adminId, date_created)
+        		VALUES(:group, :group_name, :group_description, :adminId, NOW())";
 
 		$stmt = $conn->prepare($sql);
 		$stmt->bindValue(":group", $group);
 		$stmt->bindValue(":group_name", $group_name);
 		$stmt->bindValue(":group_description", $group_description);
-
+		$stmt->bindValue(":adminId", $adminId);
 		$stmt->execute();
 
 

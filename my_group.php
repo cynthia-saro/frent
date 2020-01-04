@@ -17,24 +17,26 @@ include("php/get_myGroup.php");
     <div class="infoGroup">
       <div class="groupDate"><?php echo ("Crée le : ") . $mygroup["date_created"] ?></div>
       <div class="groupDescription"><?php echo $mygroup["group_description"] ?></div>
-      <div class="admin">
-        <?php echo ("Admin : ")  ?>
-        <a href="profil.php?iduser=<?php echo $admin['id'] ?>"> <?php echo $admin['first_name'] . "&nbsp" . $admin['last_name'] ?> </a>
+      <div class="admin"> Admin :
+        <a href="profil.php?iduser=<?php echo $admin['id'] ?>">
+          <?php echo $admin['first_name'] . "&nbsp" . $admin['last_name'] ?>
+        </a>
       </div>
-      <?php if ($mygroup["adminId"] == $_SESSION['member']['id']){?>
-        <a href="#" class="groupModify">Modifier</a>
-      <? } ?>
+      <!---if it is my group : i can edit it--->
+      <?php if ($mygroup["adminId"] == $_SESSION['member']['id']) { ?>
+        <button type="button" class="btn btn-light"><a href="#">MODIFIER</a></button>
+      <?php } ?>
     </div>
 
-    <div class="allMembers">
-        <?php foreach ($mygroupmembers as $groupmember) {
-          ?>
-          <a href="profil.php?iduser=<?php echo $groupmember['id'] ?>">
-            <img class="productPicture" src="<?php echo $groupmember['picture']?>"/>
-            <div><?php echo $groupmember['first_name'] . '&nbsp' . $groupmember['last_name'] ?></div>
-            <div><?php echo $groupmember['email'] ?></div>
-          </a>
-        <?php } ?>
+    <div class="group_members">Tous les membres du groupe :</div>
+    <div class="homeContentObjects">
+      <?php foreach ($mygroupmembers as $groupmember) {
+      ?>
+        <a href="profil.php?iduser=<?php echo $groupmember['id'] ?>">
+          <img class="productPicture" src="<?php echo $groupmember['picture'] ?>" />
+          <div><?php echo $groupmember['first_name'] . '&nbsp' . $groupmember['last_name'] ?></div>
+        </a>
+      <?php } ?>
     </div>
 
   </main>

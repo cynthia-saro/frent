@@ -19,7 +19,6 @@ include("php/db.php");
 			</div>
 
 			<article class="card-body mx-auto">
-				<!--<article class="card-body mx-auto" style="max-width: 400px;">-->
 				<h4 class="card-title mt-3 text-center">S'inscrire en tant qu'admin</h4>
 
 				<!---Form---->
@@ -133,7 +132,7 @@ include("php/db.php");
 							<span class="input-group-text"> <i class="fa fa-tag"></i> </span>
 						</div>
 						<input name="group_name" id="group_name" class="form-control" placeholder="Nom du groupe" type="text">
-						<?php if (isset($_SESSION['errors']) && array_key_exists('group', $_SESSION['errors'])) { ?>
+						<?php if (isset($_SESSION['errors']) && array_key_exists('group_name', $_SESSION['errors'])) { ?>
 							<div class="alert alert-danger mt-2">
 								<?php echo $_SESSION['errors']['group_name']; ?>
 							</div>
@@ -146,7 +145,7 @@ include("php/db.php");
 							<span class="input-group-text"> <i class="fa fa-align-justify"></i> </span>
 						</div>
 						<input name="group_description" id="group_description" class="form-control" placeholder="Description du groupe" type="text">
-						<?php if (isset($_SESSION['errors']) && array_key_exists('group', $_SESSION['errors'])) { ?>
+						<?php if (isset($_SESSION['errors']) && array_key_exists('group_description', $_SESSION['errors'])) { ?>
 							<div class="alert alert-danger mt-2">
 								<?php echo $_SESSION['errors']['group_description']; ?>
 							</div>

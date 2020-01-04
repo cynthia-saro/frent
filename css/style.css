@@ -83,6 +83,14 @@ h1.groupName{
   color: #707070;
 }
 
+/* news */
+#news{
+  background-color: red ;
+  padding: 30px;
+  color: white;
+  font-weight: bold;
+}
+
 /*Content : All objects display*/
 
 .homeContentObjects{
