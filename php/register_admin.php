@@ -1,5 +1,5 @@
 <?php
-require("db.php");
+require_once("db.php");
 session_start();
 $error = "";
 
@@ -88,11 +88,13 @@ if (isset($_POST)) {
 		$stmt->bindValue(":group", $group);
 
 		$stmt->execute();
+	
+		$_SESSION['email'] = $_POST['email'];
 
 		/****Create the group****/
 		$adminId = $_SESSION['member']['id'];
 		$sql = "INSERT INTO groups_information (identification_key, name, group_description, adminId, date_created)
-        		VALUES(:group, :group_name, :group_description, :adminId, NOW())";
+				VALUES('hi', 'hi', 'hi', 6, NOW())";
 
 		$stmt = $conn->prepare($sql);
 		$stmt->bindValue(":group", $group);
@@ -101,8 +103,6 @@ if (isset($_POST)) {
 		$stmt->bindValue(":adminId", $adminId);
 		$stmt->execute();
 
-
-		$_SESSION['email'] = $_POST['email'];
 		header('Location: ../login.php');
 	} else {
 		header('Location: ../register_admin.php');

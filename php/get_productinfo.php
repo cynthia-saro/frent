@@ -18,4 +18,14 @@ $stmt->bindValue(":idowner", $idowner);
 $stmt->execute();
 $creator=$stmt->fetch();
 
+//requete pour vérifier que le produit fait parti des produits des personnes du même groupe
+$iduser = $_SESSION['member']['id'];
+$sql="SELECT objects.id
+      FROM objects, users
+      where objects.user_id = users.id AND users.user_group = (SELECT user_group FROM users WHERE id = :iduser)";
+$stmt = $conn->prepare($sql);
+$stmt-> bindValue(":iduser", $iduser);
+$stmt->execute();
+$verifobject = $stmt->fetchAll();
+
 ?>
