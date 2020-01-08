@@ -10,24 +10,25 @@ include("php/get_myGroup.php");
 
   <?php include("layouts/header.php"); ?>
 
+  <!--Carrousel news -->
+  <div id="news">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner" v-if="news.length > 0">
+        <div class="carousel-item active">
+          <p class="newsContent">> Les nouvelles de la semaines ></p>
+        </div>
+        <div class="carousel-item" v-for="post in news" class="homeSecurity">
+          <p class="newsContent">{{post.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
   <main id="homePage">
 
     <h1 class="groupName"><?php echo $mygroup["name"] ?></h1>
 
-    <!--Carrousel news--->
-    <div id="news">
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner" v-if="news.length > 0">
-          <div class="carousel-item active">
-            <p>>> LES NEWS >></p>
-          </div>
-          <div class="carousel-item" v-for="new in news">
-            <div class="newsDescription">{{new.description}}</div>
-          </div>
-        </div>
-      </div>
-    </div>
- 
     <div class="allProdutsText">Tous les produits : </div>
     <div class="homeContentObjects">
       <?php
@@ -60,13 +61,13 @@ include("php/get_myGroup.php");
   <!--Scripts-->
   <?php include("layouts/scripts.php"); ?>
   <script>
-    /*get news*/
-    var apiURL = 'http://localhost:8000/json/news'
+    /*news*/
+    var newsAPI = 'http://localhost:8000/json/news'
 
     var news = new Vue({
       el: '#news',
       data: {
-        news: []
+        news: [],
       },
 
       created: function() {
@@ -77,7 +78,7 @@ include("php/get_myGroup.php");
       methods: {
         fetchData: function() {
           var self = this
-          axios.get(apiURL)
+          axios.get(newsAPI)
             .then(function(response) {
               console.log(response.data)
               self.news = response.data.news
