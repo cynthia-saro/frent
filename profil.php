@@ -2,6 +2,8 @@
 include("php/db.php");
 include("layouts/head.php");
 include("php/get_profilInformation.php");
+include("php/get_myGroup.php");
+$iduser = $_GET['iduser'];
 ?>
 
 <body>
@@ -11,6 +13,12 @@ include("php/get_profilInformation.php");
   <?php include("layouts/header.php"); ?>
 
   <main id="homePage">
+    <?php 
+    $accesprofil = array();
+    foreach ($mygroupmembers as $profil) {
+      $accesprofil[] = $profil['id'];
+    }
+    if (in_array($iduser, $accesprofil)) { ?>
     <div class="introProfil">
       <img class="profilImage" src="<?php echo $profilinformation['picture'] ?>" />
       <div class="introProfilContent">
@@ -41,7 +49,9 @@ include("php/get_profilInformation.php");
       <?php } ?>
 
     </div>
-
+    <?php } else {
+      echo "Vous n'avez pas accès à cette page.";
+    } ?>
   </main>
 
   <!--Scripts-->
