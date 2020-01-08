@@ -23,7 +23,6 @@ include("php/get_myGroup.php");
       </div>
     </div>
   </div>
-  </div>
 
   <main id="homePage">
 
