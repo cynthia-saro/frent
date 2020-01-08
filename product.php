@@ -22,6 +22,9 @@ $id = $_GET['id'];
       <div><?php echo $productinfo["name"] ?></div>
       <?php if ($productinfo["status"] == "Réservé") { ?>
         <div class="objBooked"><?php echo $productinfo["status"] ?></div>
+        <?php if ($_SESSION['member']['id'] ==  $creator['id']) { ?>
+          <div class="bookedBy">Par : <a href="profil.php?iduser=<?php echo $bookerinfo['id'] ?>"><?php echo $bookerinfo["first_name"] . "&nbsp" . $creator["last_name"]?></a></div>
+        <?php }?>
       <?php } ?>
       <?php if ($productinfo["status"] == "Disponible") { ?>
         <div class="objFree"><?php echo $productinfo["status"] ?></div>

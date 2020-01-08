@@ -28,4 +28,14 @@ $stmt-> bindValue(":iduser", $iduser);
 $stmt->execute();
 $verifobject = $stmt->fetchAll();
 
+//requete pour avoir les information de la personne qui a réservé l'objet
+$id = $_GET['id'];
+$sql="SELECT *
+      FROM users
+      where id = (SELECT user_booker FROM reservations WHERE obj_id = :id)";
+$stmt = $conn->prepare($sql);
+$stmt-> bindValue(":id", $id);
+$stmt->execute();
+$bookerinfo = $stmt->fetch();
+
 ?>
