@@ -91,10 +91,16 @@ if (isset($_POST)) {
 	
 		$_SESSION['email'] = $_POST['email'];
 
+		/***Retrieve last user id***/
+		$sql = "SELECT MAX(ID) FROM users";
+		$stmt = $conn->prepare($sql);
+		$stmt->execute();
+		$admin = $stmt->fetch();
+
 		/****Create the group****/
-		$adminId = $_SESSION['member']['id'];
+		$adminId = $admin['MAX(ID)'];
 		$sql = "INSERT INTO groups_information (identification_key, name, group_description, adminId, date_created)
-				VALUES('hi', 'hi', 'hi', 6, NOW())";
+				VALUES(:group, :group_name, :group_description, :adminId, NOW())";
 
 		$stmt = $conn->prepare($sql);
 		$stmt->bindValue(":group", $group);
