@@ -22,13 +22,13 @@ include("layouts/head.php");
         <div class="form-group input-group">
           <input type="hidden" name="MAX_FILE_SIZE" value="3000000000" />
           <input type="file" name="pictureProduct" id="pictureProduct">
-          <!---Errors---->
-          <?php if (isset($_SESSION['errors']) && array_key_exists('pictureProduct', $_SESSION['errors'])) { ?>
-            <div class="alert alert-danger mt-2">
-              <?php echo $_SESSION['errors']['pictureProduct']; ?>
-            </div>
-          <?php } ?>
         </div>
+        <!---Errors---->
+        <?php if (isset($_SESSION['errors']) && array_key_exists('pictureProduct', $_SESSION['errors'])) { ?>
+          <div class="alert alert-danger mt-2">
+            <?php echo $_SESSION['errors']['pictureProduct']; ?>
+          </div>
+        <?php } ?>
 
         <!----productName---->
         <div class="form-group input-group">
@@ -36,13 +36,13 @@ include("layouts/head.php");
             <span class="input-group-text"> <i class="fa fa-quote-left"></i> </span>
           </div>
           <input name="productName" id="productName" class="form-control" placeholder="Nom du produit" type="text">
-          <!---Errors---->
-          <?php if (isset($_SESSION['errors']) && array_key_exists('productName', $_SESSION['errors'])) { ?>
-            <div class="alert alert-danger mt-2">
-              <?php echo $_SESSION['errors']['productName']; ?>
-            </div>
-          <?php } ?>
         </div>
+        <!---Errors---->
+        <?php if (isset($_SESSION['errors']) && array_key_exists('productName', $_SESSION['errors'])) { ?>
+          <div class="alert alert-danger mt-2">
+            <?php echo $_SESSION['errors']['productName']; ?>
+          </div>
+        <?php } ?>
 
         <!----productCondition---->
         <div class="form-group input-group">
@@ -55,13 +55,12 @@ include("layouts/head.php");
             <option>Très bon état</option>
             <option>Correct</option>
           </select>
-          <!-- <input name="productCondition" id="productCondition" class="form-control" placeholder="État de l'object" type="text"> -->
-          <?php if (isset($_SESSION['errors']) && array_key_exists('productCondition', $_SESSION['errors'])) { ?>
-            <div class="alert alert-danger mt-2">
-              <?php echo $_SESSION['errors']['productCondition']; ?>
-            </div>
-          <?php } ?>
         </div>
+        <?php if (isset($_SESSION['errors']) && array_key_exists('productCondition', $_SESSION['errors'])) { ?>
+          <div class="alert alert-danger mt-2">
+            <?php echo $_SESSION['errors']['productCondition']; ?>
+          </div>
+        <?php } ?>
 
         <!-----productDescription----->
         <div class="form-group input-group">
@@ -69,12 +68,12 @@ include("layouts/head.php");
             <span class="input-group-text"> <i class="fa fa-align-justify "></i> </span>
           </div>
           <input name="productDescription" id="productDescription" class="form-control" placeholder="Description de l'object" type="textarea">
-          <?php if (isset($_SESSION['errors']) && array_key_exists('productDescription', $_SESSION['errors'])) { ?>
-            <div class="alert alert-danger mt-2">
-              <?php echo $_SESSION['errors']['productDescription']; ?>
-            </div>
-          <?php } ?>
         </div>
+        <?php if (isset($_SESSION['errors']) && array_key_exists('productDescription', $_SESSION['errors'])) { ?>
+          <div class="alert alert-danger mt-2">
+            <?php echo $_SESSION['errors']['productDescription']; ?>
+          </div>
+        <?php } ?>
 
         <!------BUTTONS------->
         <div>

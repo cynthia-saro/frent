@@ -22,12 +22,12 @@ include("php/get_myGroup.php");
                             <span class="input-group-text"> <i class="fa fa fa-users"></i> </span>
                         </div>
                         <input name="group" id="group" class="form-control" placeholder="Identifiant de groupe" type="text" value="<?php echo $mygroup['identification_key'] ?>">
-                        <?php if (isset($_SESSION['errors']) && array_key_exists('group', $_SESSION['errors'])) { ?>
-                            <div class="alert alert-danger mt-2">
-                                <?php echo $_SESSION['errors']['group']; ?>
-                            </div>
-                        <?php } ?>
                     </div>
+                    <?php if (isset($_SESSION['errors']) && array_key_exists('group', $_SESSION['errors'])) { ?>
+                        <div class="alert alert-danger mt-2">
+                            <?php echo $_SESSION['errors']['group']; ?>
+                        </div>
+                    <?php } ?>
 
                     <!----Group name---->
                     <div class="form-group input-group">
@@ -35,12 +35,12 @@ include("php/get_myGroup.php");
                             <span class="input-group-text"> <i class="fa fa-tag"></i> </span>
                         </div>
                         <input name="group_name" id="group_name" class="form-control" placeholder="Nom du groupe" type="text" value="<?php echo $mygroup['name'] ?>">
-                        <?php if (isset($_SESSION['errors']) && array_key_exists('group_name', $_SESSION['errors'])) { ?>
-                            <div class="alert alert-danger mt-2">
-                                <?php echo $_SESSION['errors']['group_name']; ?>
-                            </div>
-                        <?php } ?>
                     </div>
+                    <?php if (isset($_SESSION['errors']) && array_key_exists('group_name', $_SESSION['errors'])) { ?>
+                        <div class="alert alert-danger mt-2">
+                            <?php echo $_SESSION['errors']['group_name']; ?>
+                        </div>
+                    <?php } ?>
 
                     <!----Group description---->
                     <div class="form-group input-group">
@@ -48,12 +48,12 @@ include("php/get_myGroup.php");
                             <span class="input-group-text"> <i class="fa fa-align-justify"></i> </span>
                         </div>
                         <input name="group_description" id="group_description" class="form-control" placeholder="Description du groupe" type="text" value="<?php echo $mygroup['group_description'] ?>">
-                        <?php if (isset($_SESSION['errors']) && array_key_exists('group_description', $_SESSION['errors'])) { ?>
-                            <div class="alert alert-danger mt-2">
-                                <?php echo $_SESSION['errors']['group_description']; ?>
-                            </div>
-                        <?php } ?>
                     </div>
+                    <?php if (isset($_SESSION['errors']) && array_key_exists('group_description', $_SESSION['errors'])) { ?>
+                        <div class="alert alert-danger mt-2">
+                            <?php echo $_SESSION['errors']['group_description']; ?>
+                        </div>
+                    <?php } ?>
 
                     <!------BUTTONS------->
                     <div>

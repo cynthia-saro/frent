@@ -59,15 +59,20 @@ if (isset($_POST)) {
 	}
 
 	//group_name 
-	if (empty($group)) {
+	if (empty($group_name)) {
 		$_SESSION['errors']['group_name'] = "Ce champ est obligatoire";
 	}
 
 	//group_description 
-	if (empty($group)) {
+	if (empty($group_description)) {
 		$_SESSION['errors']['group_description'] = "Ce champ est obligatoire";
 	}
 
+	//picture
+	$picturePicker = $_FILES['picturePicker']['name'];
+	if (empty($picturePicker)) {
+		$_SESSION['errors']['picturePicker'] = "Ce champ est obligatoire";
+	}
 
 	// If there are no errors :
 	if (empty($_SESSION['errors']) && move_uploaded_file($_FILES['picturePicker']['tmp_name'], $uploadfile)) {

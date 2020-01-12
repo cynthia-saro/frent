@@ -32,13 +32,12 @@ include("php/get_myGroup.php");
                                             echo "selected";
                                           } ?>>Disponible</option>
             </select>
-            <?php if (isset($_SESSION['errors']) && array_key_exists('productStatus', $_SESSION['errors'])) { ?>
-              <div class="alert alert-danger mt-2">
-                <?php echo $_SESSION['errors']['productStatus']; ?>
-              </div>
-            <?php } ?>
           </div>
-
+          <?php if (isset($_SESSION['errors']) && array_key_exists('productStatus', $_SESSION['errors'])) { ?>
+            <div class="alert alert-danger mt-2">
+              <?php echo $_SESSION['errors']['productStatus']; ?>
+            </div>
+          <?php } ?>
 
           <!----booker---->
           <!--Scripts-->
@@ -50,12 +49,12 @@ include("php/get_myGroup.php");
                 <option value="<?php echo $groupmember['id'] ?>"><?php echo $groupmember['first_name'] . "&nbsp" . $groupmember['last_name'] ?></option>
               <?php } ?>
             </select>
-            <?php if (isset($_SESSION['errors']) && array_key_exists('booker', $_SESSION['errors'])) { ?>
-              <div class="alert alert-danger mt-2">
-                <?php echo $_SESSION['errors']['booker']; ?>
-              </div>
-            <?php } ?>
           </div>
+          <?php if (isset($_SESSION['errors']) && array_key_exists('booker', $_SESSION['errors'])) { ?>
+            <div class="alert alert-danger mt-2">
+              <?php echo $_SESSION['errors']['booker']; ?>
+            </div>
+          <?php } ?>
           <script>
             $("#productStatus").change(function() {
               if ($("#productStatus").val() == "Réservé") {
@@ -73,13 +72,13 @@ include("php/get_myGroup.php");
               <span class="input-group-text"> <i class="fa fa-quote-left"></i> </span>
             </div>
             <input name="productName" id="productName" class="form-control" placeholder="Nom du produit" type="text" value="<?php echo $productinfo['name'] ?>">
-            <!---Errors---->
-            <?php if (isset($_SESSION['errors']) && array_key_exists('productName', $_SESSION['errors'])) { ?>
-              <div class="alert alert-danger mt-2">
-                <?php echo $_SESSION['errors']['productName']; ?>
-              </div>
-            <?php } ?>
           </div>
+          <!---Errors---->
+          <?php if (isset($_SESSION['errors']) && array_key_exists('productName', $_SESSION['errors'])) { ?>
+            <div class="alert alert-danger mt-2">
+              <?php echo $_SESSION['errors']['productName']; ?>
+            </div>
+          <?php } ?>
 
           <!----productCondition---->
           <div class="form-group input-group">
@@ -98,12 +97,12 @@ include("php/get_myGroup.php");
                         echo "selected";
                       } ?>>Correct</option>
             </select>
-            <?php if (isset($_SESSION['errors']) && array_key_exists('productCondition', $_SESSION['errors'])) { ?>
-              <div class="alert alert-danger mt-2">
-                <?php echo $_SESSION['errors']['productCondition']; ?>
-              </div>
-            <?php } ?>
           </div>
+          <?php if (isset($_SESSION['errors']) && array_key_exists('productCondition', $_SESSION['errors'])) { ?>
+            <div class="alert alert-danger mt-2">
+              <?php echo $_SESSION['errors']['productCondition']; ?>
+            </div>
+          <?php } ?>
 
           <!-----productDescription----->
           <div class="form-group input-group">
@@ -111,12 +110,12 @@ include("php/get_myGroup.php");
               <span class="input-group-text"> <i class="fa fa-align-justify "></i> </span>
             </div>
             <input name="productDescription" id="productDescription" class="form-control" placeholder="Description de l'object" type="textarea" value="<?php echo $productinfo['description'] ?>">
-            <?php if (isset($_SESSION['errors']) && array_key_exists('productDescription', $_SESSION['errors'])) { ?>
-              <div class="alert alert-danger mt-2">
-                <?php echo $_SESSION['errors']['productDescription']; ?>
-              </div>
-            <?php } ?>
           </div>
+          <?php if (isset($_SESSION['errors']) && array_key_exists('productDescription', $_SESSION['errors'])) { ?>
+            <div class="alert alert-danger mt-2">
+              <?php echo $_SESSION['errors']['productDescription']; ?>
+            </div>
+          <?php } ?>
 
           <!------BUTTONS------->
           <div>
