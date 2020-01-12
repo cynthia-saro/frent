@@ -1,8 +1,7 @@
 <?php
 require_once("db.php");
 session_start();
-$error = "";
-
+$error="";
 //If the form is sent : 
 if (isset($_POST)) {
 	//We create variables

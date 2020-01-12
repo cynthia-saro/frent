@@ -4,8 +4,6 @@ include("layouts/head_login.php"); ?>
 
 <body>
 
-	<?php include_once('./components/debug.php'); ?>
-
 	<!------MODIFS------->
 
 	<main id="registerPage">
@@ -13,7 +11,7 @@ include("layouts/head_login.php"); ?>
 		<div class="card bg-light">
 
 			<!-- <input type="button" value="Go back!" onclick="history.back()"> -->
-			<a href="javascript:history.back()" class="linktootherpage">retour</a>
+			<a href="login.php" class="linktootherpage">retour</a>
 			<div class="registerLogo">
 				<img src="img/frent.png">
 			</div>

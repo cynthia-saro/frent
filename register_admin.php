@@ -1,19 +1,16 @@
 <?php
 include("php/db.php");
+include("layouts/head_login.php"); 
 ?>
 
-<?php include("layouts/head_login.php"); ?>
-
 <body>
-
-	<?php include_once('./components/debug.php'); ?>
 
 	<!------MODIFS------->
 	<main id="registerPage">
 
 		<div class="card bg-light">
 
-			<a href="javascript:history.back()" class="linktootherpage">retour</a>
+			<a href="register.php" class="linktootherpage">retour</a>
 			<div class="registerLogo">
 				<img src="img/frent.png">
 			</div>
@@ -48,7 +45,7 @@ include("php/db.php");
 					</div>
 					<?php if (isset($_SESSION['errors']) && array_key_exists('last_name', $_SESSION['errors'])) { ?>
 						<div class="alert alert-danger mt-2">
-							<?php echo $_SESSION['errors']['last-name']; ?>
+							<?php echo $_SESSION['errors']['last_name']; ?>
 						</div>
 					<?php } ?>
 
