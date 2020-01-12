@@ -23,8 +23,8 @@ include("php/get_myGroup.php");
         </a>
       </div>
       <!---if it is my group : i can edit it--->
-      <?php if ($mygroup["adminId"] == $_SESSION['member']['id']) { ?>
-        <button type="button" class="btn btn-light"><a href="#">MODIFIER</a></button>
+      <?php if ($_SESSION['member']['id'] ==  $mygroup['adminId']) { ?>
+        <button type="button" class="btn btn-light"><a href="edit_group.php">MODIFIER</a></button>
       <?php } ?>
     </div>
 

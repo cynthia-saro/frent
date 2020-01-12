@@ -1,8 +1,7 @@
 <?php
 include("php/db.php");
+include("layouts/head.php");
 ?>
-
-<?php include("layouts/head.php"); ?>
 
 <body>
 
