@@ -15,7 +15,7 @@ include("php/get_myGroup.php");
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner" v-if="news.length > 0">
         <div class="carousel-item active">
-          <p class="newsContent">> Les nouvelles de la semaines ></p>
+          <p class="newsContent">Bienvenue sur Frent ! Découvrez toutes nouvelles de la semaine →</p>
         </div>
         <div class="carousel-item" v-for="post in news" class="homeSecurity">
           <p class="newsContent">{{post.description}}</p>

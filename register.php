@@ -13,7 +13,7 @@ include("layouts/head_login.php"); ?>
 		<div class="card bg-light">
 
 			<!-- <input type="button" value="Go back!" onclick="history.back()"> -->
-			<a href="javascript:history.back()" class="registerReturn">retour</a>
+			<a href="javascript:history.back()" class="linktootherpage">retour</a>
 			<div class="registerLogo">
 				<img src="img/frent.png">
 			</div>
@@ -136,7 +136,7 @@ include("layouts/head_login.php"); ?>
 
 				</form>
 
-				<a class="msg_register" href="register_admin.php">Vous souhaitez vous inscrire et créer un groupe ? C'est par ici !</a>
+				<a class="msg_register linktootherpage" href="register_admin.php">Vous souhaitez vous inscrire et créer un groupe ? C'est par ici !</a>
 			</article>
 		</div> <!-- card.// -->
 

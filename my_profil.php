@@ -14,14 +14,14 @@ include("php/get_myProfilInfo.php");
     <div class="introProfil">
       <img class="profilImage" src="<?php echo $myprofilinformation['picture'] ?>" />
       <div class="introProfilContent">
-        <div class="firstNameAndLastName"><?php echo $myprofilinformation["first_name"] . '&nbsp ' . $myprofilinformation["last_name"] ?></div>
+        <div class="firstNameAndLastName"><?php echo $myprofilinformation["first_name"] . '&nbsp' . $myprofilinformation["last_name"] ?></div>
         <div class="profilEmail"><?php echo $myprofilinformation["email"] ?></div>
         <div class="phoneNumber">0<?php echo $myprofilinformation["phone_number"] ?></div>
       </div>
-      <div>
-        <a href="edit_profil.php" class="profilGoEdit">Modifier</a>
-        <a href="php/logout.php" class="profilGoEdit">Se déconnecter</a>
-      </div>
+    </div>
+    <div class="buttonEditProfil">
+      <a href="edit_profil.php" class="profilGoEdit">Modifier</a>
+      <a href="php/logout.php" class="profilLogout">Se déconnecter</a>
     </div>
 
     <div id="profilobjects">

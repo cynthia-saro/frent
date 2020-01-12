@@ -1,6 +1,6 @@
 <?php
 include("php/db.php");
-include("layouts/head.php"); 
+include("layouts/head.php");
 ?>
 
 <body>
@@ -11,14 +11,18 @@ include("layouts/head.php");
 
     <main id="homePage">
 
+        <div class="pageName faq">F.A.Q</div>
+
         <div id="faqs">
             <div class="panel-group" id="faqAccordion" v-if="faqs.length > 0">
-                <div class="panel panel-default" v-for="post in faqs">
-                    <div class="panel-heading accordion-toggle question-toggle collapsed" data-toggle="collapse" data-parent="#faqAccordion" :href="'#question-' + post.id">
-                        <h4 class="panel-title">
-                            <a href="#" class="ing">{{post.question}}</a>
-                        </h4>
-                    </div>
+                <div class="panel panel-default panelFaq" v-for="post in faqs">
+                    <a href="#" class="ing">
+                        <div class="panel-heading accordion-toggle question-toggle collapsed" data-toggle="collapse" data-parent="#faqAccordion" :href="'#question-' + post.id">
+                            <h4 class="panel-title">
+                                {{post.question}}
+                            </h4>
+                        </div>
+                    </a>
                     <div :id="'question-' + post.id" class="panel-collapse collapse" style="height: 0px;">
                         <div class="panel-body">
                             <p>{{post.answer}}</p>

@@ -44,7 +44,7 @@ include("php/db.php");
 					</div>
 
 				</form>
-				<a class="msg_register" href="register.php">Vous n'avez pas de compte? Inscrivez-vous !</a>
+				<a class="msg_register linktootherpage" href="register.php">Vous n'avez pas de compte? Inscrivez-vous !</a>
 			</article>
 		</div>
 	</main>

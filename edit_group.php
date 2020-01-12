@@ -56,12 +56,12 @@ include("php/get_myGroup.php");
                     <?php } ?>
 
                     <!------BUTTONS------->
-                    <div>
+                    <div class="buttonsColumn">
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary btn-block">Modifier</button>
                         </div>
-                        <a href="my_group.php">Annuler</a>
-                        <button type="button" class="btn btn-danger"><a href="php/delete_group.php">Supprimer le groupe</a></button>
+                        <button type="button" class="btn btn-danger"><a class="linktootherpage" href="php/delete_group.php">Supprimer le groupe</a></button>
+                        <a class="cancelButton" href="my_group.php">Annuler</a>
                     </div>
                 </form>
             <?php } else {

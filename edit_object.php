@@ -118,12 +118,12 @@ include("php/get_myGroup.php");
           <?php } ?>
 
           <!------BUTTONS------->
-          <div>
-            <a href="product.php?id=<?php echo $productinfo['id'] ?>">Annuler</a>
+          <div class="buttonsColumn">
             <div class="form-group">
               <button type="submit" class="btn btn-primary btn-block">Modifier</button>
             </div>
-            <button type="button" class="btn btn-danger"><a href="php/delete_object.php?id=<?php echo $id ?>">Supprimer l'objet</a></button>
+            <button type="button" class="btn btn-danger"><a class="linktootherpage" href="php/delete_object.php?id=<?php echo $id ?>">Supprimer l'objet</a></button>
+            <a class="cancelButton" href="product.php?id=<?php echo $productinfo['id'] ?>">Annuler</a>
           </div>
 
         </form>

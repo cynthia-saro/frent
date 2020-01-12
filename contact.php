@@ -10,13 +10,12 @@ include("layouts/head.php");
     <?php include("layouts/header.php"); ?>
 
     <main id="homePage">
-        <div>Nos locaux : 16 Boulevard Général de Gaulle, 44200 Nantes</div>
-        <div>Téléphonez-nous : 
-            <a href="tel:+33600000000">06 00 00 00 00</a>
-        </div>
-        <div>Vous avez une question ? Ecrivez-vous : 
-            <a href="mailto:contact@frent.com"> contact@frent.com</a>
-        </div>
+        <div class="contactLabel">Notre adresse : </div>
+        <div>16 Boulevard Général de Gaulle, 44200 Nantes</div>
+        <div class="contactLabel">Téléphonez-nous : </div>
+        <a href="tel:+33600000000">06 00 00 00 00</a>
+        <div class="contactLabel">Vous avez une question ? Ecrivez-vous : </div>
+        <a href="mailto:contact@frent.com"> contact@frent.com</a>
     </main>
 
     <?php include("layouts/footer.php"); ?>

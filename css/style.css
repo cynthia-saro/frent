@@ -202,29 +202,118 @@ img.productPicture{
 
 /*-----------------------------------PROFIL-------------------------------------*/
 img.profilImage{
-  width: 40px;
-  border-radius:50px;
+  width: 90px;
+  height: 90px;
+  border-radius:50%;
+}
+
+.filterBar{
+  display: flex;
+  justify-content: space-around;
+  text-align: CENTER;
+  color: white;
 }
 
 .filterBar a{
   background: lightskyblue center center no-repeat;
+  padding: 2%;
+  border-radius: 5px;
+  width: 45%;
 }
 
 .filterBar a.active{
   background-color:lightgreen;
 }
 
+.introProfil{
+  display: flex;
+  flex-direction: row;
+}
+
+.introProfilContent{
+  margin: auto;
+}
+
+.firstNameAndLastName{
+  font-weight: bold;
+}
+
+.buttonEditProfil{
+  padding: 4%;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.profilGoEdit{
+  color: rgb(255, 247, 0);
+}
+
+.profilLogout{
+  color: red;
+  margin-left: 10px;
+}
+
+.profilobjects{
+  color: #84D8F6;
+  font-weight: bold;
+  text-align: center;
+}
 /*-----------------------------------PRODUCT-------------------------------------*/
 
 #productPage{
-  padding: 7%;
+  padding: 2%;
   text-align: center;
 }
+
+.editObj{
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(255, 247, 0);
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.editObj a{
+  color: grey;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
 .objBooked{
   color: red;
+  padding: 1%;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 .objFree{
   color: green;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.objName{
+  font-weight: bold;
+}
+
+.objCondition, .contactTheOwner{
+  margin-top: 10px;
+}
+
+.contactTheOwner{
+  margin-bottom: 20px;
+}
+
+.ownerMail, .ownerPhone{
+  width: 40px;
+  padding: 10px;
+  padding: 10px;
+  color: white;
+  background-color: #84D8F6;
 }
 /*--------------------------------------------------OTHER PAGES--------------------------------------------------*/
 .pageName{
@@ -250,6 +339,49 @@ img.profilImage{
   padding: 2%;
   background-color: #FFF700;
   width: 30%;
+}
+
+.group_members{
+  font-weight: bold;
+}
+
+.memberGroupName{
+  text-align: center;
+}
+
+/*****FAQ****/
+.faq{
+  margin-bottom: 10px;
+}
+.panelFaq{
+  background-color: lightgrey;
+  padding: 2%;
+  border-radius: 3px;
+  margin: 2%;
+}
+
+.ing{
+  color: rgb(43, 43, 43);
+}
+
+/*****Contact*****/
+.contactLabel{
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/*****Links******/
+a.linktootherpage{
+  color: white;
+}
+
+.buttonsColumn{
+  display: flex;
+  flex-direction: column;
+}
+
+a.cancelButton{
+  margin: 6%;
 }
 /*****************MEDIA QUERIES*********************/
 

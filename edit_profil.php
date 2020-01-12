@@ -68,12 +68,12 @@ include("php/get_myProfilInfo.php");
                 <?php } ?>
 
                 <!------BUTTONS------->
-                <div>
+                <div class="buttonsColumn">
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-block">Modifier</button>
                     </div>
-                    <a href="my_profil.php">Annuler</a>
-                    <button type="button" class="btn btn-danger"><a href="php/delete_profil.php">Supprimer mon profil</a></button>
+                    <button type="button" class="btn btn-danger btn-block"><a class="linktootherpage" href="php/delete_profil.php">Supprimer mon profil</a></button>
+                    <a class="cancelButton" href="my_profil.php">Annuler</a>
                 </div>
             </form>
         </article>
