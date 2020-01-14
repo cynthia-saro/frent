@@ -13,7 +13,7 @@ include("php/get_myGroup.php");
   ?>
 
   <main>
-    <article class="card-body mx-auto">
+    <article class="card-body mx-auto" style="max-width: 400px;">
 
       <?php if ($_SESSION['member']['id'] ==  $creator['id']) { ?>
         <div class="">Modifier mon object</div>

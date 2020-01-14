@@ -1,7 +1,6 @@
 <?php
 require_once("db.php");
 session_start();
-$error="";
 
 if (isset($_POST)){
 
@@ -35,23 +34,21 @@ if (isset($_POST)){
 	}
 
 	if (!empty($member) && empty($_SESSION['errors'])) {
-		$passwordIsOk = password_verify($password, $member['password']);
+		// $passwordIsOk = password_verify($password, $member['password']);
 
-		if ($passwordIsOk) {
+		// if ($passwordIsOk) {
 			session_start();
 			$_SESSION['member'] = $member;
 			header("location: ../index.php");
 			exit();
-		}
-		else {
-			header('Location: ../login.php');
-		}
+		// }
+		// else {
+		// 	header('Location: ../login.php');
+		// }
 	}
 	else {
 		header('Location: ../login.php');
 		unset($_SESSION['errors']);
 	}
-
 }
-header("location: ../login.php");
 ?>

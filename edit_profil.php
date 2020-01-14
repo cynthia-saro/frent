@@ -11,8 +11,9 @@ include("php/get_myProfilInfo.php");
     <?php include("layouts/header.php"); ?>
 
     <main>
-        <article class="card-body mx-auto">
+        <article class="card-body mx-auto" style="max-width: 400px;">
             <form method="post" action="php/edit_profil.php">
+                <div class="registerCreateGroup">Modifier mon profil</div>
 
                 <!----first name---->
                 <div class="form-group input-group">

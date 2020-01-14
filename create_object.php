@@ -10,9 +10,9 @@ include("layouts/head.php");
   <?php include("layouts/header.php"); ?>
 
   <main>
-    <article class="card-body mx-auto">
+    <article class="card-body mx-auto" style="max-width: 400px;">
       <!--<article class="card-body mx-auto" style="max-width: 400px;">-->
-      <div class="">Ajouter un object</div>
+      <div class="">Ajouter un objet</div>
 
       <!---Form---->
       <form action="php/create_object.php" method="POST" enctype="multipart/form-data">

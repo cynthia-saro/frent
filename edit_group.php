@@ -11,7 +11,7 @@ include("php/get_myGroup.php");
     <?php include("layouts/header.php"); ?>
 
     <main>
-        <article class="card-body mx-auto">
+        <article class="card-body mx-auto" style="max-width: 400px;">
             <?php if ($_SESSION['member']['id'] ==  $mygroup['adminId']) { ?>
                 <form method="post" action="php/edit_group.php">
                     <div class="registerCreateGroup">Modifier votre groupe</div>
